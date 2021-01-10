@@ -5,7 +5,7 @@ from time import sleep
 
 class bot():
     def __init__(self):
-        self.driver = webdriver.Chrome('C:/Users/Phanatagama/Downloads/chromedriver.exe')
+        self.driver = webdriver.Chrome('Chrome Web Driver PATH')
 
     def login(self):
         self.driver.maximize_window()
@@ -28,9 +28,9 @@ class bot():
         sleep(2)
 
         email_fb = self.driver.find_element_by_xpath('//*[@id="email"]')
-        email_fb.send_keys('aga.comunitypartii')
+        email_fb.send_keys('EMAIL')
         passwd_fb = self.driver.find_element_by_xpath('//*[@id="pass"]')
-        passwd_fb.send_keys('aga31juli2000')
+        passwd_fb.send_keys('PASSWORD')
 
         loing_fb = self.driver.find_element_by_xpath('//*[@id="u_0_0"]').click()
         sleep(3)
